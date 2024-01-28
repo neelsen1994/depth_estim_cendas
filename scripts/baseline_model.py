@@ -14,8 +14,8 @@ train_dataset, train_info = tfds.load(name=train_dataset_name, split=train_split
 val_dataset, val_info = tfds.load(name=train_dataset_name, split=val_split, with_info=True)
 test_dataset, test_info = tfds.load(name=test_dataset_name, split=test_split, with_info=True)
 
-# Define the U-Net model for depth estimation
-def unet_model():
+# Define the model for depth estimation
+def enc_dec_model():
     inputs = tf.keras.Input(shape=(480, 640, 3))
     
     # Encoder
@@ -44,8 +44,8 @@ def unet_model():
 
     return tf.keras.Model(inputs=inputs, outputs=outputs)
 
-# Create the U-Net model
-model = unet_model()
+# Create the Encoder-Decoder model
+model = enc_dec_model()
 
 # Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
