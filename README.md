@@ -77,7 +77,7 @@ python ./scripts/visualize.py
 
 ##### Output from Depth Anything Model:
 
-![Output Image](./outputs/depthAnything_output.png)
+![Output Image](./outputs/depthAnything_output.PNG)
 
 ## Acknowledgments
 
