@@ -49,7 +49,7 @@ To train the model, use the `train.py` script and run the command from the proje
 python ./scripts/train.py
 ```
 
-The trained model is available for download. Create a `model/` directory in the project root directory, and store the downloaded model there so that it can be easily accessed from the evaluation script.
+The trained model is available for download below. Create a `model/` directory in the project root directory, and store the downloaded model there so that it can be easily accessed from the evaluation script.
 
 Baseline model: [Download Model](https://drive.google.com/file/d/1Dus3U8t3iR2yiTdQaIcp1j90zG7lolga/view?usp=sharing)
 
@@ -77,3 +77,9 @@ python ./scripts/visualize.py
 
 The project was inspired as part of the assessment for the hiring process at Cendas Gmbh. I would like to express my gratitude to Alex Zinelis, Klari and Cendas Gmbh for the opportunity to work on this project.
 
+## Contact Information
+
+If you have any questions, please do not hesitate to contact me
+* [Debayan Sen][sjlink] :envelope: `debayan.sen1994@gmail.com`
+
+[sjlink]: debayan.sen1994@gmail.com
