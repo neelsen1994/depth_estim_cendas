@@ -71,6 +71,8 @@ The visualize.py script provides tools for visualizing the results of the depth 
 python ./scripts/visualize.py
 ```
 
+![Output Image](./outputs/output_test2.png)
+
 ## Acknowledgments
 
 The project was inspired as part of the assessment for the hiring process at Cendas Gmbh. I would like to express my gratitude to Alex Zinelis, Klari and Cendas Gmbh for the opportunity to work on this project.
