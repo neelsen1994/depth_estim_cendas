@@ -25,10 +25,17 @@ tqdm.pandas()
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
 import tensorflow_datasets as tfds
-from keras.callbacks import ModelCheckpoint, EarlyStopping
+from keras.callbacks import ModelCheckpoint, EarlyStopping, LearningRateScheduler
 from utils import generate_data, depth_statistics
 from model import build_unet_model
 from loss import custom_loss
+
+# Learning Rate Scheduler Function
+def lr_scheduler(epoch, lr):
+    if epoch < 3:
+        return lr  # Keep the initial learning rate for the first 3 epochs
+    else:
+        return lr * tf.math.exp(-0.1)  # Exponential decay after the third epoch
 
 # Metadata
 BASE_PATH = "./data"
@@ -75,6 +82,9 @@ unet_model.compile(
     loss=custom_loss,
 )
 
+# Callback setup with Learning Rate Scheduler
+lr_scheduler_callback = LearningRateScheduler(lr_scheduler, verbose=1)
+
 # Callback setup
 early_stopping = EarlyStopping(
     monitor="val_loss",
@@ -89,7 +99,7 @@ model_checkpoint = ModelCheckpoint(
     verbose=1,
     save_best_only=True
 )
-callbacks = [early_stopping, model_checkpoint]
+callbacks = [early_stopping, model_checkpoint, lr_scheduler_callback]
 
 # Training the model
 start_time = time.time()
