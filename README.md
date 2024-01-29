@@ -1,6 +1,6 @@
 # Monocular Depth Estimation with U-Net
 
-This repository contains the code for a monocular depth estimation project, created as part of a recruitment task assigned by Cendas Gmbh. The project utilizes a U-Net architecture for monocular depth estimation.
+This repository contains the code for a monocular depth estimation project, created as part of a recruitment task assigned by **Cendas Gmbh**. The project utilizes a U-Net architecture for monocular depth estimation.
 
 ## Overview
 
