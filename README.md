@@ -4,16 +4,22 @@ This repository contains the code for a monocular depth estimation project, crea
 
 ## Overview
 
-The goal of this project is to implement a monocular depth estimation model using deep learning techniques. First, a simple baseline model is trained with an encoder-decoder architecture. Then, the U-Net architecture is employed for its effectiveness in image-to-image regression tasks. This repository contains scripts for training, testing, and visualizing the output for the monocular depth estimation task using a U-Net architecture.
+The goal of this project is to implement a monocular depth estimation model using deep learning techniques. First, a simple baseline model is trained with an encoder-decoder architecture. Then, the U-Net architecture is employed for its effectiveness in image-to-image regression tasks. This repository contains scripts for training, testing, and visualizing the output for the monocular depth estimation task using a U-Net architecture, leveraging the NYU Depth V2 dataset.
 
 ## Project Structure
 
-- [`train.py`](scripts/train.py): Python script for training the depth estimation model.
-- `test.py`: Python script for testing the trained model on new data.
-- `utils.py`: Utility functions used in the project.
-- `loss.py`: Implementing custom loss which is a combination of SSIM, L1, and Edge Loss.
-- `model.py`: Implementation of the U-Net model for depth estimation.
-- `visualize.py`: Script for visualizing the results of the depth estimation.
+- `scripts/`: Directory containing Python scripts.
+  - `baseline_model.py`: Python script for creating simple encoder-decoder arcitecture with NYU Depth V2 dataset available in TFDS.   
+  - `train.py`: Python script for training the monocular depth estimation model with U-Net and using a subset of the NYU Depth V2 dataset downloaded from [kaggle](https://www.kaggle.com/datasets/soumikrakshit/nyu-depth-v2).
+  - `test.py`: Python script for testing the trained model on new data.
+  - `utils.py`: Utility functions used in the project.
+  - `loss.py`: Implementing custom loss which is a combination of SSIM, L1, and Edge Loss.
+  - `model.py`: Implementation of the U-Net model for depth estimation.
+  - `visualize.py`: Script for visualizing the results of the depth estimation.
+- `Literature/`: Directory containing published papers for bibliographic research work.
+- `outputs/`: Directory containing the depth images predicted by the trained models.
+- `plots/`: Directory containing the loss curve for training the U-Net model.
+- **Assessment Report**: This file contains a brief explanation about each task assigned for the project.
 
 ## Usage
 
