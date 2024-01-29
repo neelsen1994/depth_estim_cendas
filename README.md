@@ -9,7 +9,7 @@ The goal of this project is to implement a monocular depth estimation model usin
 ## Project Structure
 
 - `scripts/`: Directory containing Python scripts.
-  - `baseline_model.py`: Python script for creating simple encoder-decoder arcitecture with NYU Depth V2 dataset available in TFDS.   
+  - `baseline_model.py`: Python script for creating simple encoder-decoder architecture with NYU Depth V2 dataset available in TFDS.   
   - `train.py`: Python script for training the monocular depth estimation model with U-Net and using a subset of the NYU Depth V2 dataset downloaded from [kaggle](https://www.kaggle.com/datasets/soumikrakshit/nyu-depth-v2).
   - `evaluate.py`: Python script for testing the trained model on new data.
   - `utils.py`: Utility functions used in the project.
@@ -71,7 +71,13 @@ The visualize.py script provides tools for visualizing the results of the depth 
 python ./scripts/visualize.py
 ```
 
-![Output Image](./outputs/output_test2.png)
+##### Output from U-Net Model:
+
+![Output Image](./outputs/UNet_output_2.png)
+
+##### Output from Depth Anything Model:
+
+![Output Image](./outputs/depthAnything_output.png)
 
 ## Acknowledgments
 
